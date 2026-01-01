@@ -1,0 +1,100 @@
+[gd_resource type="Theme" load_steps=20 format=3 uid="uid://chgt08oxms2t"]
+
+[sub_resource type="FontFile" id="FontFile_xpuf8"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/48/0/ascent = 0.0
+cache/0/48/0/descent = 0.0
+cache/0/48/0/underline_position = 0.0
+cache/0/48/0/underline_thickness = 0.0
+cache/0/48/0/scale = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v2lfg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tg4cr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_37rai"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0qrqu"]
+
+[sub_resource type="Gradient" id="Gradient_v2lfg"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tg4cr"]
+gradient = SubResource("Gradient_v2lfg")
+width = 1
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_37rai"]
+gradient = SubResource("Gradient_v2lfg")
+width = 1
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0qrqu"]
+gradient = SubResource("Gradient_v2lfg")
+width = 1
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mx0kw"]
+gradient = SubResource("Gradient_v2lfg")
+width = 1
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fsbdh"]
+gradient = SubResource("Gradient_v2lfg")
+width = 1
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_n6wdb"]
+gradient = SubResource("Gradient_v2lfg")
+width = 1
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_g3huw"]
+gradient = SubResource("Gradient_v2lfg")
+width = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_280g2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w4oxd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fsbdh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n6wdb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mx0kw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2lfg"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[resource]
+Button/fonts/font = SubResource("FontFile_xpuf8")
+Button/styles/focus = SubResource("StyleBoxEmpty_v2lfg")
+Button/styles/hover = SubResource("StyleBoxEmpty_tg4cr")
+Button/styles/normal = SubResource("StyleBoxEmpty_37rai")
+Button/styles/pressed = SubResource("StyleBoxEmpty_0qrqu")
+CheckButton/colors/font_disabled_color = Color(1, 1, 1, 1)
+CheckButton/constants/align_to_largest_stylebox = 1
+CheckButton/constants/h_separation = 0
+CheckButton/icons/checked = SubResource("GradientTexture1D_tg4cr")
+CheckButton/icons/checked_disabled = SubResource("GradientTexture1D_37rai")
+CheckButton/icons/checked_disabled_mirrored = SubResource("GradientTexture1D_0qrqu")
+CheckButton/icons/checked_mirrored = SubResource("GradientTexture1D_mx0kw")
+CheckButton/icons/unchecked = SubResource("GradientTexture1D_mx0kw")
+CheckButton/icons/unchecked_disabled = SubResource("GradientTexture1D_fsbdh")
+CheckButton/icons/unchecked_disabled_mirrored = SubResource("GradientTexture1D_n6wdb")
+CheckButton/icons/unchecked_mirrored = SubResource("GradientTexture1D_g3huw")
+CheckButton/styles/disabled = SubResource("StyleBoxEmpty_280g2")
+CheckButton/styles/focus = SubResource("StyleBoxEmpty_w4oxd")
+CheckButton/styles/hover = SubResource("StyleBoxEmpty_fsbdh")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxEmpty_n6wdb")
+CheckButton/styles/normal = SubResource("StyleBoxEmpty_mx0kw")
+CheckButton/styles/pressed = SubResource("StyleBoxFlat_v2lfg")

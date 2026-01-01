@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Scene" load_steps=2 format=3 uid="uid://dck40oqlq6s6n"]
+
+[ext_resource type="Script" uid="uid://cumiwx653blas" path="res://Scripts/scene.gd" id="1_hhm3u"]
+
+[resource]
+script = ExtResource("1_hhm3u")
+text = "hi"
+character_name = "Char 1"
+can_go_back = false
+metadata/_custom_type_script = "uid://cumiwx653blas"
