@@ -1009,22 +1009,21 @@ text = "Quit"
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
-current_tab = 2
+current_tab = 1
 tabs_visible = false
 
 [node name="Saves" type="GridContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer"]
 visible = false
-layout_direction = 3
 layout_mode = 2
 theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 102
 columns = 4
 metadata/_tab_index = 0
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
 layout_mode = 2
 
-[node name="S4" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer4"]
+[node name="S1" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1032,27 +1031,10 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer4"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Save Slot 4"
-horizontal_alignment = 1
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
-layout_mode = 2
-
-[node name="S3" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer3"]
-custom_minimum_size = Vector2(152, 120)
-layout_mode = 2
-theme = SubResource("Theme_as1ww")
-texture_normal = ExtResource("10_robvp")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer3"]
-layout_mode = 2
-theme = SubResource("Theme_86mtp")
-text = "Save Slot 3"
+text = "Save Slot 1"
 horizontal_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
@@ -1072,10 +1054,10 @@ theme = SubResource("Theme_86mtp")
 text = "Save Slot 2"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
 layout_mode = 2
 
-[node name="S1" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer"]
+[node name="S3" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer3"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1083,16 +1065,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer3"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Save Slot 1"
+text = "Save Slot 3"
 horizontal_alignment = 1
 
-[node name="VBoxContainer8" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
 layout_mode = 2
 
-[node name="S8" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer8"]
+[node name="S4" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer4"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1100,44 +1082,10 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer8"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer4"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Save Slot 8"
-horizontal_alignment = 1
-
-[node name="VBoxContainer7" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
-layout_mode = 2
-
-[node name="S7" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer7"]
-custom_minimum_size = Vector2(152, 120)
-layout_mode = 2
-theme = SubResource("Theme_as1ww")
-texture_normal = ExtResource("10_robvp")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer7"]
-layout_mode = 2
-theme = SubResource("Theme_86mtp")
-text = "Save Slot 7"
-horizontal_alignment = 1
-
-[node name="VBoxContainer6" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
-layout_mode = 2
-
-[node name="S6" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer6"]
-custom_minimum_size = Vector2(152, 120)
-layout_mode = 2
-theme = SubResource("Theme_as1ww")
-texture_normal = ExtResource("10_robvp")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer6"]
-layout_mode = 2
-theme = SubResource("Theme_86mtp")
-text = "Save Slot 6"
+text = "Save Slot 4"
 horizontal_alignment = 1
 
 [node name="VBoxContainer5" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
@@ -1157,10 +1105,10 @@ theme = SubResource("Theme_86mtp")
 text = "Save Slot 5"
 horizontal_alignment = 1
 
-[node name="VBoxContainer12" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer6" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
 layout_mode = 2
 
-[node name="S12" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer12"]
+[node name="S6" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer6"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1168,16 +1116,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer12"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer6"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Save Slot 12"
+text = "Save Slot 6"
 horizontal_alignment = 1
 
-[node name="VBoxContainer11" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer7" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
 layout_mode = 2
 
-[node name="S11" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer11"]
+[node name="S7" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer7"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1185,16 +1133,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer11"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer7"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Save Slot 11"
+text = "Save Slot 7"
 horizontal_alignment = 1
 
-[node name="VBoxContainer10" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer8" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
 layout_mode = 2
 
-[node name="S10" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer10"]
+[node name="S8" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer8"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1202,10 +1150,10 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer10"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer8"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Save Slot 10"
+text = "Save Slot 8"
 horizontal_alignment = 1
 
 [node name="VBoxContainer9" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
@@ -1225,19 +1173,68 @@ theme = SubResource("Theme_86mtp")
 text = "Save Slot 9"
 horizontal_alignment = 1
 
+[node name="VBoxContainer10" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+layout_mode = 2
+
+[node name="S10" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer10"]
+custom_minimum_size = Vector2(152, 120)
+layout_mode = 2
+theme = SubResource("Theme_as1ww")
+texture_normal = ExtResource("10_robvp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer10"]
+layout_mode = 2
+theme = SubResource("Theme_86mtp")
+text = "Save Slot 10"
+horizontal_alignment = 1
+
+[node name="VBoxContainer11" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+layout_mode = 2
+
+[node name="S11" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer11"]
+custom_minimum_size = Vector2(152, 120)
+layout_mode = 2
+theme = SubResource("Theme_as1ww")
+texture_normal = ExtResource("10_robvp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer11"]
+layout_mode = 2
+theme = SubResource("Theme_86mtp")
+text = "Save Slot 11"
+horizontal_alignment = 1
+
+[node name="VBoxContainer12" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+layout_mode = 2
+
+[node name="S12" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer12"]
+custom_minimum_size = Vector2(152, 120)
+layout_mode = 2
+theme = SubResource("Theme_as1ww")
+texture_normal = ExtResource("10_robvp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer12"]
+layout_mode = 2
+theme = SubResource("Theme_86mtp")
+text = "Save Slot 12"
+horizontal_alignment = 1
+
 [node name="Loading" type="GridContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer"]
-visible = false
-layout_direction = 3
 layout_mode = 2
 theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 102
 columns = 4
 metadata/_tab_index = 1
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
 layout_mode = 2
 
-[node name="L4" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer4"]
+[node name="L1" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1245,27 +1242,10 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer4"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Load Save 4"
-horizontal_alignment = 1
-
-[node name="VBoxContainer3" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
-layout_mode = 2
-
-[node name="L3" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer3"]
-custom_minimum_size = Vector2(152, 120)
-layout_mode = 2
-theme = SubResource("Theme_as1ww")
-texture_normal = ExtResource("10_robvp")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer3"]
-layout_mode = 2
-theme = SubResource("Theme_86mtp")
-text = "Load Save 3"
+text = "Load Save 1"
 horizontal_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
@@ -1285,10 +1265,10 @@ theme = SubResource("Theme_86mtp")
 text = "Load Save 2"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
 layout_mode = 2
 
-[node name="L1" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer"]
+[node name="L3" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer3"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1296,16 +1276,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer3"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Load Save 1"
+text = "Load Save 3"
 horizontal_alignment = 1
 
-[node name="VBoxContainer8" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
 layout_mode = 2
 
-[node name="L8" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer8"]
+[node name="L4" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer4"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1313,44 +1293,10 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer8"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer4"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Load Save 8"
-horizontal_alignment = 1
-
-[node name="VBoxContainer7" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
-layout_mode = 2
-
-[node name="L7" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer7"]
-custom_minimum_size = Vector2(152, 120)
-layout_mode = 2
-theme = SubResource("Theme_as1ww")
-texture_normal = ExtResource("10_robvp")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer7"]
-layout_mode = 2
-theme = SubResource("Theme_86mtp")
-text = "Load Save 7"
-horizontal_alignment = 1
-
-[node name="VBoxContainer6" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
-layout_mode = 2
-
-[node name="L6" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer6"]
-custom_minimum_size = Vector2(152, 120)
-layout_mode = 2
-theme = SubResource("Theme_as1ww")
-texture_normal = ExtResource("10_robvp")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer6"]
-layout_mode = 2
-theme = SubResource("Theme_86mtp")
-text = "Load Save 6"
+text = "Load Save 4"
 horizontal_alignment = 1
 
 [node name="VBoxContainer5" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
@@ -1370,10 +1316,10 @@ theme = SubResource("Theme_86mtp")
 text = "Load Save 5"
 horizontal_alignment = 1
 
-[node name="VBoxContainer12" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer6" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
 layout_mode = 2
 
-[node name="L12" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer12"]
+[node name="L6" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer6"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1381,16 +1327,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer12"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer6"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Load Save 12"
+text = "Load Save 6"
 horizontal_alignment = 1
 
-[node name="VBoxContainer11" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer7" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
 layout_mode = 2
 
-[node name="L11" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer11"]
+[node name="L7" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer7"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1398,16 +1344,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer11"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer7"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Load Save 11"
+text = "Load Save 7"
 horizontal_alignment = 1
 
-[node name="VBoxContainer10" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer8" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
 layout_mode = 2
 
-[node name="L10" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer10"]
+[node name="L8" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer8"]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1415,10 +1361,10 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer10"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer8"]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
-text = "Load Save 10"
+text = "Load Save 8"
 horizontal_alignment = 1
 
 [node name="VBoxContainer9" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
@@ -1438,7 +1384,59 @@ theme = SubResource("Theme_86mtp")
 text = "Load Save 9"
 horizontal_alignment = 1
 
+[node name="VBoxContainer10" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+layout_mode = 2
+
+[node name="L10" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer10"]
+custom_minimum_size = Vector2(152, 120)
+layout_mode = 2
+theme = SubResource("Theme_as1ww")
+texture_normal = ExtResource("10_robvp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer10"]
+layout_mode = 2
+theme = SubResource("Theme_86mtp")
+text = "Load Save 10"
+horizontal_alignment = 1
+
+[node name="VBoxContainer11" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+layout_mode = 2
+
+[node name="L11" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer11"]
+custom_minimum_size = Vector2(152, 120)
+layout_mode = 2
+theme = SubResource("Theme_as1ww")
+texture_normal = ExtResource("10_robvp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer11"]
+layout_mode = 2
+theme = SubResource("Theme_86mtp")
+text = "Load Save 11"
+horizontal_alignment = 1
+
+[node name="VBoxContainer12" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+layout_mode = 2
+
+[node name="L12" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer12"]
+custom_minimum_size = Vector2(152, 120)
+layout_mode = 2
+theme = SubResource("Theme_as1ww")
+texture_normal = ExtResource("10_robvp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer12"]
+layout_mode = 2
+theme = SubResource("Theme_86mtp")
+text = "Load Save 12"
+horizontal_alignment = 1
+
 [node name="Settings" type="Control" parent="Menu/PanelContainer/HBoxContainer/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -1691,30 +1689,30 @@ bus = &"Music"
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/VBoxContainer/Load" to="Menu" method="_on_load_pressed"]
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/VBoxContainer/Options" to="Menu" method="_on_options_pressed"]
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/VBoxContainer/Quit" to="Menu" method="_on_quit_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer4/S4" to="SaveSystem" method="_on_s_4_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer3/S3" to="SaveSystem" method="_on_s_3_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer2/S2" to="SaveSystem" method="_on_s_2_pressed"]
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer/S1" to="SaveSystem" method="_on_s_1_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer8/S8" to="SaveSystem" method="_on_s_8_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer7/S7" to="SaveSystem" method="_on_s_7_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer6/S6" to="SaveSystem" method="_on_s_6_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer2/S2" to="SaveSystem" method="_on_s_2_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer3/S3" to="SaveSystem" method="_on_s_3_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer4/S4" to="SaveSystem" method="_on_s_4_pressed"]
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer5/S5" to="SaveSystem" method="_on_s_5_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer12/S12" to="SaveSystem" method="_on_s_12_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer11/S11" to="SaveSystem" method="_on_s_11_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer10/S10" to="SaveSystem" method="_on_s_10_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer6/S6" to="SaveSystem" method="_on_s_6_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer7/S7" to="SaveSystem" method="_on_s_7_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer8/S8" to="SaveSystem" method="_on_s_8_pressed"]
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer9/S9" to="SaveSystem" method="_on_s_9_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer4/L4" to="SaveSystem" method="_on_l_4_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer3/L3" to="SaveSystem" method="_on_l_3_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer2/L2" to="SaveSystem" method="_on_l_2_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer10/S10" to="SaveSystem" method="_on_s_10_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer11/S11" to="SaveSystem" method="_on_s_11_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer12/S12" to="SaveSystem" method="_on_s_12_pressed"]
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer/L1" to="SaveSystem" method="_on_l_1_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer8/L8" to="SaveSystem" method="_on_l_8_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer7/L7" to="SaveSystem" method="_on_l_7_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer6/L6" to="SaveSystem" method="_on_l_6_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer2/L2" to="SaveSystem" method="_on_l_2_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer3/L3" to="SaveSystem" method="_on_l_3_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer4/L4" to="SaveSystem" method="_on_l_4_pressed"]
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer5/L5" to="SaveSystem" method="_on_l_5_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer12/L12" to="SaveSystem" method="_on_l_12_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer11/L11" to="SaveSystem" method="_on_l_11_pressed"]
-[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer10/L10" to="SaveSystem" method="_on_l_10_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer6/L6" to="SaveSystem" method="_on_l_6_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer7/L7" to="SaveSystem" method="_on_l_7_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer8/L8" to="SaveSystem" method="_on_l_8_pressed"]
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer9/L9" to="SaveSystem" method="_on_l_9_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer10/L10" to="SaveSystem" method="_on_l_10_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer11/L11" to="SaveSystem" method="_on_l_11_pressed"]
+[connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer12/L12" to="SaveSystem" method="_on_l_12_pressed"]
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer2/win" to="Menu" method="_on_win_pressed"]
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer2/full" to="Menu" method="_on_full_pressed"]
 [connection signal="drag_ended" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer/ticks" to="." method="_on_ticks_drag_ended"]

@@ -1,44 +1,15 @@
 extends CanvasLayer
 
 func _ready():
-	#region Saving and Loading save icons
-	if FileAccess.file_exists("user://save1.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer/S1.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save1.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer/L1.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save1.png'))
-	if FileAccess.file_exists("user://save2.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer2/S2.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save2.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer2/L2.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save2.png'))
-	if FileAccess.file_exists("user://save3.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer3/S3.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save3.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer3/L3.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save3.png'))
-	if FileAccess.file_exists("user://save4.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer4/S4.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save4.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer4/L4.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save4.png'))
-	if FileAccess.file_exists("user://save5.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer5/S5.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save5.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer5/L5.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save5.png'))
-	if FileAccess.file_exists("user://save6.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer6/S6.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save6.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer6/L6.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save6.png'))
-	if FileAccess.file_exists("user://save7.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer7/S7.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save7.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer7/L7.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save7.png'))
-	if FileAccess.file_exists("user://save8.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer8/S8.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save8.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer8/L8.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save8.png'))
-	if FileAccess.file_exists("user://save9.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer9/S9.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save9.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer9/L9.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save9.png'))
-	if FileAccess.file_exists("user://save10.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer10/S10.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save10.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer10/L10.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save10.png'))
-	if FileAccess.file_exists("user://save11.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer11/S11.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save11.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer11/L11.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save11.png'))
-	if FileAccess.file_exists("user://save12.png"):
-		$PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer12/S12.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save12.png'))
-		$PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer12/L12.texture_normal = ImageTexture.create_from_image(Image.load_from_file('user://save12.png'))
-#endregion
+	for s in $PanelContainer/HBoxContainer/TabContainer/Saves.get_children(): #Gets each Vbox of the saves
+		var path:String = ('user://save'+str(s.get_index()+1)+'.png')
+		if FileAccess.file_exists(path): #Checks if it has a png
+			s.get_child(0).texture_normal = ImageTexture.create_from_image(Image.load_from_file(path))
+	
+	for l in $PanelContainer/HBoxContainer/TabContainer/Loading.get_children():
+		var path:String = ('user://save'+str(l.get_index()+1)+'.png')
+		if FileAccess.file_exists(path):
+			l.get_child(0).texture_normal = ImageTexture.create_from_image(Image.load_from_file(path))
 
 func _on_resume_pressed() -> void:
 	get_tree().paused = false
