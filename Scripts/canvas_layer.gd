@@ -66,31 +66,18 @@ func _process(_delta: float) -> void:
 			tick = 0
 			$MainBox/VBoxContainer/Text.visible_characters += 1
 
-func _on_oa_pressed() -> void:
+func _on_option_pressed(button_id: int) -> void: #Used advanced mode while connecting the signal
 	if autoafter == true and auto_on == true:
 		$MainBox/VBoxContainer/Menu/Auto.button_pressed = true
 		$Timer.start()
 	if loaded_scene.save_scene == true:
 		scenes.append(loaded_scene)
-	loaded_scene = loaded_scene.option_a
-	new_scene()
-
-func _on_ob_pressed() -> void:
-	if autoafter == true and auto_on == true:
-		$MainBox/VBoxContainer/Menu/Auto.button_pressed = true
-		$Timer.start()
-	if loaded_scene.save_scene == true:
-		scenes.append(loaded_scene)
-	loaded_scene = loaded_scene.option_b
-	new_scene()
-
-func _on_oc_pressed() -> void:
-	if autoafter == true and auto_on == true:
-		$MainBox/VBoxContainer/Menu/Auto.button_pressed = true
-		$Timer.start()
-	if loaded_scene.save_scene == true:
-		scenes.append(loaded_scene)
-	loaded_scene = loaded_scene.option_c
+	if button_id == 1:
+		loaded_scene = loaded_scene.option_a
+	elif button_id == 2:
+		loaded_scene = loaded_scene.option_b
+	elif button_id == 3:
+		loaded_scene = loaded_scene.option_c
 	new_scene()
 
 func _on_timer_timeout() -> void:
