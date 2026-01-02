@@ -1003,6 +1003,7 @@ text = "Load"
 [node name="Menu" type="CanvasLayer" parent="."]
 process_mode = 2
 layer = 2
+visible = false
 script = ExtResource("4_mx0kw")
 
 [node name="PanelContainer" type="PanelContainer" parent="Menu"]
@@ -1770,6 +1771,7 @@ bus = &"SFX"
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer2/full" to="Menu" method="_on_full_pressed"]
 [connection signal="drag_ended" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer/ticks" to="." method="_on_ticks_drag_ended"]
 [connection signal="drag_ended" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer2/auto" to="." method="_on_auto_drag_ended"]
+[connection signal="value_changed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer/music" to="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer/music" method="_on_music_value_changed"]
 [connection signal="value_changed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer2/sfx" to="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer2/sfx" method="_on_music_value_changed"]
 [connection signal="toggled" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer4/autooptiond" to="." method="_on_autooptiond_toggled"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

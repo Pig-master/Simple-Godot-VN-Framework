@@ -14,6 +14,8 @@ func _load(path):
 			$"../Music2".stream = $"..".loaded_scene.song
 			$"../Music2".play()
 		$"..".new_scene()
+		get_tree().paused = false
+		$"../Menu".visible = false
 
 func _save(num):
 	$"../Menu".visible = false
