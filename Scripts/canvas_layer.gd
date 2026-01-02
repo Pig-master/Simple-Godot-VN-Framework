@@ -1,13 +1,15 @@
 extends CanvasLayer
 var loaded_scene:Resource
 var scenes:Array = []
-var tick:float = 0.0
+var ended:bool = false
 var can_advance:bool = true
 var ticks:float = 2.0
-var autoafter:bool = false
-var ended:bool = false
+var tick:float = 0.0
 var tick_mod:float = 0
+var autoafter:bool = false
 var auto_on:bool = false
+
+@onready var text: RichTextLabel = $MainBox/VBoxContainer/Text
 
 func _ready() -> void:
 	loaded_scene = preload("uid://dck40oqlq6s6n")
@@ -20,51 +22,49 @@ func new_scene():
 		music_fade()
 	if loaded_scene.end == true:
 		ended = true
-	$MainBox/VBoxContainer/Text.visible_ratio = 0
+	text.visible_ratio = 0
 	if loaded_scene.change_bg == true:
 		if loaded_scene.bg != null:
 			$Bg/Bg.texture = loaded_scene.bg
 			$AnimationPlayer.play("Fade in")
 		else:
 			$AnimationPlayer.play("Fade out")
-	$MainBox/VBoxContainer/Text.text = loaded_scene.text
+	text.text = loaded_scene.text
 	$MainBox/VBoxContainer/Name.text = loaded_scene.character_name
 	if loaded_scene.options == 0:
-		$MainBox/VBoxContainer/Options/OA.visible = false
-		$MainBox/VBoxContainer/Options/OB.visible = false
-		$MainBox/VBoxContainer/Options/OC.visible = false
+		for x in $MainBox/VBoxContainer/Options.get_children():
+			x.visible = false
 	else:
 		if loaded_scene.options >= 1:
+			$Timer.stop()
 			$MainBox/VBoxContainer/Options/OA.visible = true
 			$MainBox/VBoxContainer/Options/OA.text = loaded_scene.option_a_text
 		if loaded_scene.options >= 2:
 			$MainBox/VBoxContainer/Options/OB.visible = true
 			$MainBox/VBoxContainer/Options/OB.text = loaded_scene.option_b_text
-		if loaded_scene.options == 3:
+		if loaded_scene.options >= 3:
 			$MainBox/VBoxContainer/Options/OC.visible = true
 			$MainBox/VBoxContainer/Options/OC.text = loaded_scene.option_c_text
-	if loaded_scene.options >= 1:
-		$Timer.stop()
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("new_scene") and can_advance == true and $MainBox.visible == true and loaded_scene.options <= 0 and ended == false:
-		if $MainBox/VBoxContainer/Text.visible_ratio == 1:
+		if text.visible_ratio == 1:
 			if loaded_scene.save_scene == true:
 				scenes.append(loaded_scene)
 			loaded_scene.read = true
 			loaded_scene = loaded_scene.next
 			new_scene()
 		else:
-			$MainBox/VBoxContainer/Text.visible_ratio = 1
+			text.visible_ratio = 1
 
 func _process(_delta: float) -> void:
 	if $AnimationPlayer.is_playing():
 		can_advance = false
-	if $MainBox/VBoxContainer/Text.visible_ratio < 1:
+	if text.visible_ratio < 1:
 		tick += 0.5
 		if tick == ticks:
 			tick = 0
-			$MainBox/VBoxContainer/Text.visible_characters += 1
+			text.visible_characters += 1
 
 func _on_option_pressed(button_id: int) -> void: #Used advanced mode while connecting the signal
 	if autoafter == true and auto_on == true:

@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@onready var menu: TabContainer = $PanelContainer/HBoxContainer/TabContainer
+
 func _ready():
 	for s in $PanelContainer/HBoxContainer/TabContainer/Saves.get_children(): #Gets each Vbox of the saves
 		var path:String = ('user://save'+str(s.get_index()+1)+'.png')
@@ -18,19 +20,19 @@ func _on_resume_pressed() -> void:
 func _on_menu_menu_pressed() -> void:
 	get_tree().paused = true
 	$".".visible = true
-	$"."/PanelContainer/HBoxContainer/TabContainer.current_tab = 2
+	menu.current_tab = 2
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
 
 func _on_save_pressed() -> void:
-	$"."/PanelContainer/HBoxContainer/TabContainer.current_tab = 0
+	menu.current_tab = 0
 
 func _on_load_pressed() -> void:
-	$"."/PanelContainer/HBoxContainer/TabContainer.current_tab = 1
+	menu.current_tab = 1
 
 func _on_options_pressed() -> void:
-	$"."/PanelContainer/HBoxContainer/TabContainer.current_tab = 2
+	menu.current_tab = 2
 
 func _on_win_pressed() -> void:
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
@@ -71,9 +73,9 @@ func _on_auto_toggled(toggled_on: bool) -> void:
 func _on_save_menu_pressed() -> void:
 	get_tree().paused = true
 	$".".visible = true
-	$"."/PanelContainer/HBoxContainer/TabContainer.current_tab = 0
+	menu.current_tab = 0
 
 func _on_load_menu_pressed() -> void:
 	get_tree().paused = true
 	$".".visible = true
-	$"."/PanelContainer/HBoxContainer/TabContainer.current_tab = 1
+	menu.current_tab = 1
