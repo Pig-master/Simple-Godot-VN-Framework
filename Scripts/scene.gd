@@ -19,4 +19,5 @@ class_name Scene
 @export var can_go_back:bool = true
 @export var change_song:bool = false
 @export var song:AudioStream
+@export var SFX:AudioStream
 @export var end:bool = false

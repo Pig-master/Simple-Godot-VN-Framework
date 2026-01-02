@@ -1003,7 +1003,6 @@ text = "Load"
 [node name="Menu" type="CanvasLayer" parent="."]
 process_mode = 2
 layer = 2
-visible = false
 script = ExtResource("4_mx0kw")
 
 [node name="PanelContainer" type="PanelContainer" parent="Menu"]
@@ -1058,7 +1057,7 @@ text = "Quit"
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
-current_tab = 1
+current_tab = 2
 tabs_visible = false
 
 [node name="Saves" type="GridContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer"]
@@ -1274,6 +1273,7 @@ text = "Save Slot 12"
 horizontal_alignment = 1
 
 [node name="Loading" type="GridContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 102
@@ -1485,7 +1485,6 @@ text = "Load Save 12"
 horizontal_alignment = 1
 
 [node name="Settings" type="Control" parent="Menu/PanelContainer/HBoxContainer/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -1687,6 +1686,8 @@ min_value = 0.2
 max_value = 5.0
 step = 0.05
 value = 1.0
+script = ExtResource("9_as1ww")
+bus_name = "SFX"
 
 [node name="VBoxContainer4" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings"]
 layout_mode = 0
@@ -1721,6 +1722,9 @@ bus = &"Music"
 volume_db = -40.0
 autoplay = true
 bus = &"Music"
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
 
 [connection signal="pressed" from="MainBox/VBoxContainer/Options/OA" to="." method="_on_option_pressed" binds= [1]]
 [connection signal="pressed" from="MainBox/VBoxContainer/Options/OB" to="." method="_on_option_pressed" binds= [2]]
@@ -1766,5 +1770,6 @@ bus = &"Music"
 [connection signal="pressed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer2/full" to="Menu" method="_on_full_pressed"]
 [connection signal="drag_ended" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer/ticks" to="." method="_on_ticks_drag_ended"]
 [connection signal="drag_ended" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer2/auto" to="." method="_on_auto_drag_ended"]
+[connection signal="value_changed" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer2/sfx" to="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer2/sfx" method="_on_music_value_changed"]
 [connection signal="toggled" from="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer4/autooptiond" to="." method="_on_autooptiond_toggled"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

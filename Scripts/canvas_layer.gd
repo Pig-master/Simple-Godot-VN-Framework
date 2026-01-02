@@ -45,6 +45,9 @@ func new_scene():
 		if loaded_scene.options >= 3:
 			$MainBox/VBoxContainer/Options/OC.visible = true
 			$MainBox/VBoxContainer/Options/OC.text = loaded_scene.option_c_text
+	if loaded_scene.SFX != null:
+		$SFX.stream = loaded_scene.SFX
+		$SFX.play()
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("new_scene") and can_advance == true and $MainBox.visible == true and loaded_scene.options <= 0 and ended == false:
