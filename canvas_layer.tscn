@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://bhgestebq5bju"]
+[gd_scene load_steps=43 format=4 uid="uid://bhgestebq5bju"]
 
 [ext_resource type="Script" uid="uid://cslpx5eh1xkx6" path="res://Scripts/canvas_layer.gd" id="1_v2lfg"]
 [ext_resource type="Theme" uid="uid://dhocp85k2k8rx" path="res://Chocies.tres" id="2_37rai"]
@@ -719,138 +719,14 @@ tracks/0/keys = {
 "values": [1.0, 0.0]
 }
 
-[sub_resource type="Animation" id="Animation_fsbdh"]
-resource_name = "Pan"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Bg:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-40, 0), Vector2(-80, 0), Vector2(0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_mx0kw"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Bg/Bg:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("MainBox:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:follow_viewport_enabled")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_g3huw"]
-resource_name = "Shake"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:follow_viewport_enabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_280g2"]
-resource_name = "blacken"
-
-[sub_resource type="Animation" id="Animation_5cw7b"]
-resource_name = "bubbles"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MainBox:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_n6wdb"]
-resource_name = "memorys"
-length = 7.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MainBox:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:follow_viewport_enabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 7.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_as1ww"]
-resource_name = "snow"
-length = 1.5
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w4oxd"]
 _data = {
 &"Fade in": SubResource("Animation_0qrqu"),
 &"Fade out": SubResource("Animation_w4oxd"),
-&"Pan": SubResource("Animation_fsbdh"),
-&"RESET": SubResource("Animation_mx0kw"),
-&"Shake": SubResource("Animation_g3huw"),
-&"blacken": SubResource("Animation_280g2"),
-&"bubbles": SubResource("Animation_5cw7b"),
-&"memorys": SubResource("Animation_n6wdb"),
-&"snow": SubResource("Animation_as1ww")
+&"RESET": SubResource("Animation_mx0kw")
 }
 
 [node name="CanvasLayer" type="CanvasLayer"]
