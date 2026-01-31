@@ -16,6 +16,7 @@ func _ready() -> void:
 	new_scene()
 
 func new_scene():
+	loaded_scene.backend["back_bg"] = $Bg/Bg.texture
 	tick = 0
 	ticks = loaded_scene.text_speed + tick_mod
 	if loaded_scene.change_song == true:
@@ -23,12 +24,9 @@ func new_scene():
 	if loaded_scene.end == true:
 		ended = true
 	text.visible_ratio = 0
-	if loaded_scene.change_bg == true:
-		if loaded_scene.bg != null:
-			$Bg/Bg.texture = loaded_scene.bg
-			$AnimationPlayer.play("Fade in")
-		else:
-			$AnimationPlayer.play("Fade out")
+	if loaded_scene.bg != null:
+		$Bg/Bg.texture = loaded_scene.bg
+		$AnimationPlayer.play("Fade in")
 	text.text = loaded_scene.text
 	$MainBox/VBoxContainer/Name.text = loaded_scene.character_name
 	if loaded_scene.options == 0:
@@ -54,7 +52,7 @@ func _unhandled_input(_event):
 		if text.visible_ratio == 1:
 			if loaded_scene.save_scene == true:
 				scenes.append(loaded_scene)
-			loaded_scene.read = true
+			loaded_scene.backend["read"] = true
 			loaded_scene = loaded_scene.next
 			new_scene()
 		else:
@@ -91,7 +89,7 @@ func _on_timer_timeout() -> void:
 		new_scene()
 
 func _on_skip_timeout() -> void:
-	if loaded_scene.read == true and ended == false:
+	if loaded_scene.backend["read"] == true and ended == false:
 		if loaded_scene.save_scene == true:
 			scenes.append(loaded_scene)
 		loaded_scene = loaded_scene.next

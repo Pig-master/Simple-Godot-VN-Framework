@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://bhgestebq5bju"]
+[gd_scene format=4 uid="uid://bhgestebq5bju"]
 
 [ext_resource type="Script" uid="uid://cslpx5eh1xkx6" path="res://Scripts/canvas_layer.gd" id="1_v2lfg"]
 [ext_resource type="Theme" uid="uid://dhocp85k2k8rx" path="res://Chocies.tres" id="2_37rai"]
@@ -48,6 +48,15 @@ font_name = "Lilex"
 style_name = "Regular"
 font_style = 4
 msdf_pixel_range = 8
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 16.0
 cache/0/16/0/descent = 5.0
 cache/0/16/0/underline_position = 2.71875
@@ -409,6 +418,15 @@ font_name = "Lilex"
 style_name = "Italic"
 font_style = 6
 msdf_pixel_range = 8
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 16.0
 cache/0/16/0/descent = 5.0
 cache/0/16/0/underline_position = 2.71875
@@ -624,16 +642,25 @@ Button/styles/normal = SubResource("StyleBoxFlat_280g2")
 Button/styles/pressed = SubResource("StyleBoxFlat_5cw7b")
 
 [sub_resource type="FontFile" id="FontFile_fsbdh"]
-cache/0/18/0/ascent = 0.0
-cache/0/18/0/descent = 0.0
-cache/0/18/0/underline_position = 0.0
-cache/0/18/0/underline_thickness = 0.0
-cache/0/18/0/scale = 1.0
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
 
 [sub_resource type="Theme" id="Theme_86mtp"]
 Label/colors/font_color = Color(1, 1, 1, 1)
@@ -703,36 +730,19 @@ tracks/0/keys = {
 "values": [0.0, 1.0]
 }
 
-[sub_resource type="Animation" id="Animation_w4oxd"]
-resource_name = "Fade out"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Bg/Bg:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [1.0, 0.0]
-}
-
 [sub_resource type="Animation" id="Animation_mx0kw"]
 length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w4oxd"]
 _data = {
 &"Fade in": SubResource("Animation_0qrqu"),
-&"Fade out": SubResource("Animation_w4oxd"),
 &"RESET": SubResource("Animation_mx0kw")
 }
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer" type="CanvasLayer" unique_id=119786352]
 script = ExtResource("1_v2lfg")
 
-[node name="Bg" type="MarginContainer" parent="."]
+[node name="Bg" type="MarginContainer" parent="." unique_id=394864207]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -743,12 +753,13 @@ grow_vertical = 2
 scale = Vector2(1.1, 1.1)
 mouse_filter = 2
 
-[node name="Bg" type="TextureRect" parent="Bg"]
+[node name="Bg" type="TextureRect" parent="Bg" unique_id=1337855226]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 mouse_filter = 2
 expand_mode = 2
 
-[node name="MainBox" type="PanelContainer" parent="."]
+[node name="MainBox" type="PanelContainer" parent="." unique_id=99834774]
 anchors_preset = -1
 anchor_left = 0.1
 anchor_top = 0.7
@@ -763,11 +774,11 @@ grow_vertical = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0qrqu")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainBox"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainBox" unique_id=1756842211]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="Name" type="RichTextLabel" parent="MainBox/VBoxContainer"]
+[node name="Name" type="RichTextLabel" parent="MainBox/VBoxContainer" unique_id=214750858]
 custom_minimum_size = Vector2(0, 34)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -785,7 +796,7 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 1
 
-[node name="Text" type="RichTextLabel" parent="MainBox/VBoxContainer"]
+[node name="Text" type="RichTextLabel" parent="MainBox/VBoxContainer" unique_id=106539494]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
@@ -803,86 +814,86 @@ shortcut_keys_enabled = false
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="Options" type="VBoxContainer" parent="MainBox/VBoxContainer"]
+[node name="Options" type="VBoxContainer" parent="MainBox/VBoxContainer" unique_id=776577033]
 layout_mode = 2
 size_flags_horizontal = 4
 alignment = 1
 
-[node name="OA" type="Button" parent="MainBox/VBoxContainer/Options"]
+[node name="OA" type="Button" parent="MainBox/VBoxContainer/Options" unique_id=1278826433]
 custom_minimum_size = Vector2(600, 30)
 layout_mode = 2
 theme = ExtResource("2_37rai")
 autowrap_mode = 2
 
-[node name="OB" type="Button" parent="MainBox/VBoxContainer/Options"]
+[node name="OB" type="Button" parent="MainBox/VBoxContainer/Options" unique_id=827051698]
 custom_minimum_size = Vector2(400, 30)
 layout_mode = 2
 theme = ExtResource("2_37rai")
 autowrap_mode = 2
 
-[node name="OC" type="Button" parent="MainBox/VBoxContainer/Options"]
+[node name="OC" type="Button" parent="MainBox/VBoxContainer/Options" unique_id=1735089471]
 custom_minimum_size = Vector2(400, 30)
 layout_mode = 2
 theme = ExtResource("2_37rai")
 autowrap_mode = 2
 
-[node name="HSeparator" type="HSeparator" parent="MainBox/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MainBox/VBoxContainer" unique_id=1320085179]
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/separator = SubResource("StyleBoxLine_37rai")
 
-[node name="Menu" type="HBoxContainer" parent="MainBox/VBoxContainer"]
+[node name="Menu" type="HBoxContainer" parent="MainBox/VBoxContainer" unique_id=1118950666]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 60
 alignment = 1
 
-[node name="Back" type="Button" parent="MainBox/VBoxContainer/Menu"]
+[node name="Back" type="Button" parent="MainBox/VBoxContainer/Menu" unique_id=1676294595]
 layout_mode = 2
 theme = ExtResource("2_tg4cr")
 text = "Back"
 
-[node name="Skip" type="CheckButton" parent="MainBox/VBoxContainer/Menu"]
+[node name="Skip" type="CheckButton" parent="MainBox/VBoxContainer/Menu" unique_id=1610817533]
 layout_mode = 2
 theme = ExtResource("2_tg4cr")
 text = "Skip"
 alignment = 1
 icon_alignment = 1
 
-[node name="skip" type="Timer" parent="MainBox/VBoxContainer/Menu/Skip"]
+[node name="skip" type="Timer" parent="MainBox/VBoxContainer/Menu/Skip" unique_id=444094867]
 wait_time = 0.1
 
-[node name="Auto" type="CheckButton" parent="MainBox/VBoxContainer/Menu"]
+[node name="Auto" type="CheckButton" parent="MainBox/VBoxContainer/Menu" unique_id=1696289819]
 layout_mode = 2
 theme = ExtResource("2_tg4cr")
 text = "Auto"
 alignment = 1
 icon_alignment = 1
 
-[node name="Menu_Menu" type="Button" parent="MainBox/VBoxContainer/Menu"]
+[node name="Menu_Menu" type="Button" parent="MainBox/VBoxContainer/Menu" unique_id=1883138079]
 layout_mode = 2
 theme = ExtResource("2_tg4cr")
 text = "Menu"
 
-[node name="Save_Menu" type="Button" parent="MainBox/VBoxContainer/Menu"]
+[node name="Save_Menu" type="Button" parent="MainBox/VBoxContainer/Menu" unique_id=1324018036]
 layout_mode = 2
 theme = ExtResource("2_tg4cr")
 text = "Save"
 
-[node name="Load_Menu" type="Button" parent="MainBox/VBoxContainer/Menu"]
+[node name="Load_Menu" type="Button" parent="MainBox/VBoxContainer/Menu" unique_id=1764823464]
 layout_mode = 2
 theme = ExtResource("2_tg4cr")
 text = "Load"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=2133872855]
 
-[node name="Menu" type="CanvasLayer" parent="."]
+[node name="Menu" type="CanvasLayer" parent="." unique_id=2111086376]
 process_mode = 2
 layer = 2
 visible = false
 script = ExtResource("4_mx0kw")
 
-[node name="PanelContainer" type="PanelContainer" parent="Menu"]
+[node name="PanelContainer" type="PanelContainer" parent="Menu" unique_id=313663041]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -890,54 +901,54 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_w4oxd")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/PanelContainer" unique_id=1270489275]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer" unique_id=1095381256]
 process_mode = 2
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/separation = 39
 alignment = 1
 
-[node name="Resume" type="Button" parent="Menu/PanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Resume" type="Button" parent="Menu/PanelContainer/HBoxContainer/VBoxContainer" unique_id=428809357]
 layout_mode = 2
 theme = ExtResource("2_tg4cr")
 theme_override_font_sizes/font_size = 48
 text = "Resume"
 
-[node name="Save" type="Button" parent="Menu/PanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Save" type="Button" parent="Menu/PanelContainer/HBoxContainer/VBoxContainer" unique_id=976576844]
 layout_mode = 2
 theme = ExtResource("2_tg4cr")
 theme_override_font_sizes/font_size = 48
 text = "Save"
 
-[node name="Load" type="Button" parent="Menu/PanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Load" type="Button" parent="Menu/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1065942554]
 layout_mode = 2
 theme = ExtResource("2_tg4cr")
 theme_override_font_sizes/font_size = 48
 text = "Load"
 
-[node name="Options" type="Button" parent="Menu/PanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Options" type="Button" parent="Menu/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1207641844]
 layout_mode = 2
 theme = ExtResource("2_tg4cr")
 theme_override_font_sizes/font_size = 48
 text = "Options"
 
-[node name="Quit" type="Button" parent="Menu/PanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="Menu/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1584622838]
 layout_mode = 2
 theme = ExtResource("2_tg4cr")
 theme_override_font_sizes/font_size = 48
 text = "Quit"
 
-[node name="TabContainer" type="TabContainer" parent="Menu/PanelContainer/HBoxContainer"]
+[node name="TabContainer" type="TabContainer" parent="Menu/PanelContainer/HBoxContainer" unique_id=882399292]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 current_tab = 2
 tabs_visible = false
 
-[node name="Saves" type="GridContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer"]
+[node name="Saves" type="GridContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer" unique_id=1541738461]
 visible = false
 layout_mode = 2
 theme_override_constants/h_separation = 100
@@ -945,10 +956,10 @@ theme_override_constants/v_separation = 102
 columns = 4
 metadata/_tab_index = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=1816437730]
 layout_mode = 2
 
-[node name="S1" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer"]
+[node name="S1" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer" unique_id=98782953]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -956,16 +967,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer" unique_id=1986569694]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 1"
 horizontal_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=1770820078]
 layout_mode = 2
 
-[node name="S2" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer2"]
+[node name="S2" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer2" unique_id=1317702995]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -973,16 +984,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer2"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer2" unique_id=1137138174]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 2"
 horizontal_alignment = 1
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=27914742]
 layout_mode = 2
 
-[node name="S3" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer3"]
+[node name="S3" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer3" unique_id=1999541768]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -990,16 +1001,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer3"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer3" unique_id=1150420230]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 3"
 horizontal_alignment = 1
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=1778766925]
 layout_mode = 2
 
-[node name="S4" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer4"]
+[node name="S4" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer4" unique_id=1951423804]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1007,16 +1018,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer4"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer4" unique_id=1034000078]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 4"
 horizontal_alignment = 1
 
-[node name="VBoxContainer5" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer5" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=716501216]
 layout_mode = 2
 
-[node name="S5" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer5"]
+[node name="S5" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer5" unique_id=830610985]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1024,16 +1035,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer5"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer5" unique_id=2001415809]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 5"
 horizontal_alignment = 1
 
-[node name="VBoxContainer6" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer6" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=2064186191]
 layout_mode = 2
 
-[node name="S6" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer6"]
+[node name="S6" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer6" unique_id=1767030848]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1041,16 +1052,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer6"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer6" unique_id=542153346]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 6"
 horizontal_alignment = 1
 
-[node name="VBoxContainer7" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer7" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=1377947086]
 layout_mode = 2
 
-[node name="S7" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer7"]
+[node name="S7" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer7" unique_id=90303851]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1058,16 +1069,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer7"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer7" unique_id=1934886159]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 7"
 horizontal_alignment = 1
 
-[node name="VBoxContainer8" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer8" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=1556613166]
 layout_mode = 2
 
-[node name="S8" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer8"]
+[node name="S8" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer8" unique_id=1524902870]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1075,16 +1086,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer8"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer8" unique_id=735377686]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 8"
 horizontal_alignment = 1
 
-[node name="VBoxContainer9" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer9" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=84539452]
 layout_mode = 2
 
-[node name="S9" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer9"]
+[node name="S9" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer9" unique_id=1031438620]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1092,16 +1103,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer9"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer9" unique_id=964550372]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 9"
 horizontal_alignment = 1
 
-[node name="VBoxContainer10" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer10" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=292032636]
 layout_mode = 2
 
-[node name="S10" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer10"]
+[node name="S10" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer10" unique_id=861791787]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1109,16 +1120,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer10"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer10" unique_id=1936237228]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 10"
 horizontal_alignment = 1
 
-[node name="VBoxContainer11" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer11" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=418861473]
 layout_mode = 2
 
-[node name="S11" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer11"]
+[node name="S11" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer11" unique_id=700467467]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1126,16 +1137,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer11"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer11" unique_id=1977564146]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 11"
 horizontal_alignment = 1
 
-[node name="VBoxContainer12" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves"]
+[node name="VBoxContainer12" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves" unique_id=2021702964]
 layout_mode = 2
 
-[node name="S12" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer12"]
+[node name="S12" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer12" unique_id=1970600710]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1143,13 +1154,13 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer12"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Saves/VBoxContainer12" unique_id=2010530736]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Save Slot 12"
 horizontal_alignment = 1
 
-[node name="Loading" type="GridContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer"]
+[node name="Loading" type="GridContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer" unique_id=1876264342]
 visible = false
 layout_mode = 2
 theme_override_constants/h_separation = 100
@@ -1157,10 +1168,10 @@ theme_override_constants/v_separation = 102
 columns = 4
 metadata/_tab_index = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=954801487]
 layout_mode = 2
 
-[node name="L1" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer"]
+[node name="L1" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer" unique_id=1375439585]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1168,16 +1179,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer" unique_id=1409036420]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 1"
 horizontal_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=1219330169]
 layout_mode = 2
 
-[node name="L2" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer2"]
+[node name="L2" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer2" unique_id=1652944252]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1185,16 +1196,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer2"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer2" unique_id=594448390]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 2"
 horizontal_alignment = 1
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=1538954376]
 layout_mode = 2
 
-[node name="L3" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer3"]
+[node name="L3" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer3" unique_id=375923526]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1202,16 +1213,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer3"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer3" unique_id=352271589]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 3"
 horizontal_alignment = 1
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=1179472567]
 layout_mode = 2
 
-[node name="L4" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer4"]
+[node name="L4" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer4" unique_id=61462238]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1219,16 +1230,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer4"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer4" unique_id=34286879]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 4"
 horizontal_alignment = 1
 
-[node name="VBoxContainer5" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer5" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=51927183]
 layout_mode = 2
 
-[node name="L5" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer5"]
+[node name="L5" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer5" unique_id=485283660]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1236,16 +1247,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer5"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer5" unique_id=816160091]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 5"
 horizontal_alignment = 1
 
-[node name="VBoxContainer6" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer6" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=554970556]
 layout_mode = 2
 
-[node name="L6" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer6"]
+[node name="L6" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer6" unique_id=492157635]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1253,16 +1264,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer6"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer6" unique_id=1757656965]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 6"
 horizontal_alignment = 1
 
-[node name="VBoxContainer7" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer7" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=2134771082]
 layout_mode = 2
 
-[node name="L7" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer7"]
+[node name="L7" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer7" unique_id=302243899]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1270,16 +1281,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer7"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer7" unique_id=1609366446]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 7"
 horizontal_alignment = 1
 
-[node name="VBoxContainer8" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer8" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=1609301626]
 layout_mode = 2
 
-[node name="L8" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer8"]
+[node name="L8" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer8" unique_id=1030001601]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1287,16 +1298,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer8"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer8" unique_id=854823794]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 8"
 horizontal_alignment = 1
 
-[node name="VBoxContainer9" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer9" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=1027845769]
 layout_mode = 2
 
-[node name="L9" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer9"]
+[node name="L9" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer9" unique_id=710998404]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1304,16 +1315,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer9"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer9" unique_id=343367629]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 9"
 horizontal_alignment = 1
 
-[node name="VBoxContainer10" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer10" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=1925553321]
 layout_mode = 2
 
-[node name="L10" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer10"]
+[node name="L10" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer10" unique_id=1376971698]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1321,16 +1332,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer10"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer10" unique_id=1549600624]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 10"
 horizontal_alignment = 1
 
-[node name="VBoxContainer11" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer11" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=128807757]
 layout_mode = 2
 
-[node name="L11" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer11"]
+[node name="L11" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer11" unique_id=1734305785]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1338,16 +1349,16 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer11"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer11" unique_id=1697934023]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 11"
 horizontal_alignment = 1
 
-[node name="VBoxContainer12" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading"]
+[node name="VBoxContainer12" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading" unique_id=238918524]
 layout_mode = 2
 
-[node name="L12" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer12"]
+[node name="L12" type="TextureButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer12" unique_id=902783285]
 custom_minimum_size = Vector2(152, 120)
 layout_mode = 2
 theme = SubResource("Theme_as1ww")
@@ -1355,17 +1366,17 @@ texture_normal = ExtResource("10_robvp")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer12"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Loading/VBoxContainer12" unique_id=742604448]
 layout_mode = 2
 theme = SubResource("Theme_86mtp")
 text = "Load Save 12"
 horizontal_alignment = 1
 
-[node name="Settings" type="Control" parent="Menu/PanelContainer/HBoxContainer/TabContainer"]
+[node name="Settings" type="Control" parent="Menu/PanelContainer/HBoxContainer/TabContainer" unique_id=1035102747]
 layout_mode = 2
 metadata/_tab_index = 2
 
-[node name="mar" type="MarginContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings"]
+[node name="mar" type="MarginContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings" unique_id=2077586153]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -1376,14 +1387,14 @@ offset_right = -99.0
 offset_bottom = 508.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/mar"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/mar" unique_id=2078970329]
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Text Settings:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="mar2" type="MarginContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings"]
+[node name="mar2" type="MarginContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings" unique_id=1286139671]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -1394,14 +1405,14 @@ offset_right = -15.0
 offset_bottom = 145.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/mar2"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/mar2" unique_id=710224567]
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Window Settings:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="mar3" type="MarginContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings"]
+[node name="mar3" type="MarginContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings" unique_id=1708011765]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -1412,14 +1423,14 @@ offset_right = 410.0
 offset_bottom = 511.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/mar3"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/mar3" unique_id=814626006]
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Audio Settings:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="mar4" type="MarginContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings"]
+[node name="mar4" type="MarginContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings" unique_id=1270844080]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -1430,14 +1441,14 @@ offset_right = 457.0
 offset_bottom = 145.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/mar4"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/mar4" unique_id=679820929]
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
 text = "Misc Settings:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings" unique_id=282368478]
 layout_mode = 0
 offset_left = 44.0
 offset_top = 129.0
@@ -1445,7 +1456,7 @@ offset_right = 401.0
 offset_bottom = 244.0
 theme_override_constants/separation = 10
 
-[node name="win" type="Button" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer2"]
+[node name="win" type="Button" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer2" unique_id=282664719]
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxEmpty_dcl8t")
@@ -1457,7 +1468,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ml53l")
 text = "Fullscreen"
 alignment = 0
 
-[node name="full" type="Button" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer2"]
+[node name="full" type="Button" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer2" unique_id=1266883409]
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxEmpty_dcl8t")
@@ -1469,7 +1480,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ml53l")
 text = "Windowed"
 alignment = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings" unique_id=1690793704]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1484,15 +1495,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 22
 
-[node name="HBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer"]
+[node name="HBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer" unique_id=762692995]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer" unique_id=173739078]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Text Delay:"
 
-[node name="ticks" type="HSlider" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer"]
+[node name="ticks" type="HSlider" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer" unique_id=816819617]
 layout_mode = 2
 theme = SubResource("Theme_robvp")
 min_value = -1.5
@@ -1500,15 +1511,15 @@ max_value = 5.0
 step = 0.5
 value = 0.5
 
-[node name="HBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer"]
+[node name="HBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer" unique_id=1186629181]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer2" unique_id=1670497458]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Auto Speed Delay:"
 
-[node name="auto" type="HSlider" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer2"]
+[node name="auto" type="HSlider" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer2" unique_id=1875282252]
 layout_mode = 2
 theme = SubResource("Theme_robvp")
 min_value = 0.2
@@ -1516,7 +1527,7 @@ max_value = 5.0
 step = 0.05
 value = 1.0
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings" unique_id=293311262]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1531,15 +1542,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 22
 
-[node name="HBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3"]
+[node name="HBoxContainer" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3" unique_id=659962453]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer" unique_id=594146262]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Music:"
 
-[node name="music" type="HSlider" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer"]
+[node name="music" type="HSlider" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer" unique_id=300491846]
 layout_mode = 2
 theme = SubResource("Theme_robvp")
 min_value = -2.0
@@ -1548,15 +1559,15 @@ step = 0.5
 script = ExtResource("9_as1ww")
 bus_name = "Music"
 
-[node name="HBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3"]
+[node name="HBoxContainer2" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3" unique_id=1515581285]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer2"]
+[node name="Label" type="Label" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer2" unique_id=325770075]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "SFX:"
 
-[node name="sfx" type="HSlider" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer2"]
+[node name="sfx" type="HSlider" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer3/HBoxContainer2" unique_id=1394112154]
 layout_mode = 2
 theme = SubResource("Theme_robvp")
 min_value = 0.2
@@ -1566,14 +1577,14 @@ value = 1.0
 script = ExtResource("9_as1ww")
 bus_name = "SFX"
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings" unique_id=1267187845]
 layout_mode = 0
 offset_left = 398.0
 offset_top = 124.0
 offset_right = 857.0
 offset_bottom = 239.0
 
-[node name="autooptiond" type="CheckButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer4"]
+[node name="autooptiond" type="CheckButton" parent="Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer4" unique_id=484890586]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = SubResource("FontFile_5cw7b")
@@ -1583,24 +1594,22 @@ theme_override_icons/unchecked = SubResource("GradientTexture2D_86mtp")
 text = "Resume Auto After Choices: "
 alignment = 2
 
-[node name="SaveSystem" type="Node" parent="."]
+[node name="SaveSystem" type="Node" parent="." unique_id=1670938702]
 script = ExtResource("4_0qrqu")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_w4oxd")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1208858038]
+libraries/ = SubResource("AnimationLibrary_w4oxd")
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1823606963]
 autoplay = true
 bus = &"Music"
 
-[node name="Music2" type="AudioStreamPlayer" parent="."]
+[node name="Music2" type="AudioStreamPlayer" parent="." unique_id=330593145]
 volume_db = -40.0
 autoplay = true
 bus = &"Music"
 
-[node name="SFX" type="AudioStreamPlayer" parent="."]
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=847501557]
 bus = &"SFX"
 
 [connection signal="pressed" from="MainBox/VBoxContainer/Options/OA" to="." method="_on_option_pressed" binds= [1]]

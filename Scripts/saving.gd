@@ -28,6 +28,6 @@ func _save(num):
 	var save:SaveGame = SaveGame.new()
 	save.scene = $"..".loaded_scene
 	save.scenes = $"..".scenes
-	save.bg = $"..".loaded_scene.bg
+	save.bg = $"../Bg/Bg".texture
 	save.can_advance = $"..".can_advance
 	ResourceSaver.save(save, "user://save"+str(num)+".tres")

@@ -43,6 +43,7 @@ func _on_full_pressed() -> void:
 func _on_back_pressed() -> void:
 	if $"..".scenes != [] and $"..".ended == false and $"..".loaded_scene.can_go_back == true and not $"../AnimationPlayer".is_playing():
 		var scene = $"..".loaded_scene
+		$"../Bg/Bg".texture = scene.backend["back_bg"]
 		$"..".loaded_scene = $"..".scenes.pop_back()
 		if scene.song != $"..".loaded_scene.song:
 			if $"../Music".volume_db == 0:
@@ -51,7 +52,6 @@ func _on_back_pressed() -> void:
 			else:
 				$"../Music2".stream = $"..".loaded_scene.song
 				$"../Music2".play()
-		$"../Bg/Bg".texture = $"..".loaded_scene.bg
 		$"..".tick = 0
 		$"..".new_scene()
 
