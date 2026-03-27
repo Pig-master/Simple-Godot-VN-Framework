@@ -5,20 +5,20 @@ var ended:bool = false
 var can_advance:bool = true
 var ticks:float = 2.0
 var tick:float = 0.0
-var tick_mod:float = 0
-var autoafter:bool = false
 var auto_on:bool = false
 
 @onready var text: RichTextLabel = $MainBox/VBoxContainer/Text
 
 func _ready() -> void:
+	Settings.on_main_scene = true
+	get_tree().paused = false
 	loaded_scene = preload("uid://dck40oqlq6s6n")
 	new_scene()
 
 func new_scene():
 	loaded_scene.backend["back_bg"] = $Bg/Bg.texture
 	tick = 0
-	ticks = loaded_scene.text_speed + tick_mod
+	ticks = loaded_scene.text_speed + Settings.tick_mod
 	if loaded_scene.change_song == true:
 		music_fade()
 	if loaded_scene.end == true:
@@ -28,7 +28,6 @@ func new_scene():
 		$Bg/Bg.texture = loaded_scene.bg
 		$AnimationPlayer.play("Fade in")
 	text.text = loaded_scene.text
-	$MainBox/VBoxContainer/Name.text = loaded_scene.character_name
 	if loaded_scene.options == 0:
 		for x in $MainBox/VBoxContainer/Options.get_children():
 			x.visible = false
@@ -68,7 +67,7 @@ func _process(_delta: float) -> void:
 			text.visible_characters += 1
 
 func _on_option_pressed(button_id: int) -> void: #Used advanced mode while connecting the signal
-	if autoafter == true and auto_on == true:
+	if Settings.autoafter == true and auto_on == true:
 		$MainBox/VBoxContainer/Menu/Auto.button_pressed = true
 		$Timer.start()
 	if loaded_scene.save_scene == true:
@@ -98,20 +97,6 @@ func _on_skip_timeout() -> void:
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
 	can_advance = true
 
-func _on_ticks_drag_ended(_value_changed: bool) -> void:
-	tick_mod = $Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer/ticks.value
-	ticks = tick_mod + loaded_scene.text_speed
-	tick = 0
-
-func _on_auto_drag_ended(_value_changed: bool) -> void:
-	$Timer.wait_time = $Menu/PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer2/auto.value
-
-func _on_autooptiond_toggled(toggled_on: bool) -> void:
-	if toggled_on:
-		autoafter = true
-	else:
-		autoafter = false
-
 func music_fade():
 	var tween = get_tree().create_tween().set_parallel(true)
 	if $Music.stream == null:
@@ -130,3 +115,8 @@ func music_fade():
 		await tween.finished
 		$Music.stream = null
 		$Music.stop()
+
+func _on_menu_update_settings() -> void:
+	$Timer.wait_time = Settings.auto_speed
+	tick = 0
+	ticks = loaded_scene.text_speed + Settings.tick_mod

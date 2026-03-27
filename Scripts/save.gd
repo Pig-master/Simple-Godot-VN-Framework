@@ -5,3 +5,4 @@ class_name SaveGame
 @export var scenes:Array
 @export var bg:Resource
 @export var can_advance:bool
+@export var settings:Dictionary

@@ -15,8 +15,12 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Simple Godot VN Framework"
-run/main_scene="uid://bhgestebq5bju"
+run/main_scene="uid://bof5o7ymp3sls"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[autoload]
+
+Settings="*uid://bgc5jdkpu5frw"
 
 [display]
 

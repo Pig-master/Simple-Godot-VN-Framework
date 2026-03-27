@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var menu: TabContainer = $PanelContainer/HBoxContainer/TabContainer
+signal update_settings()
 
 func _ready():
 	for s in $PanelContainer/HBoxContainer/TabContainer/Saves.get_children(): #Gets each Vbox of the saves
@@ -14,6 +15,7 @@ func _ready():
 			l.get_child(0).texture_normal = ImageTexture.create_from_image(Image.load_from_file(path))
 
 func _on_resume_pressed() -> void:
+	update_settings.emit()
 	get_tree().paused = false
 	$".".visible = false
 
@@ -79,3 +81,21 @@ func _on_load_menu_pressed() -> void:
 	get_tree().paused = true
 	$".".visible = true
 	menu.current_tab = 1
+
+func _on_autooptiond_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		Settings.autoafter = true
+	else:
+		Settings.autoafter = false
+
+func _on_auto_drag_ended(_value_changed: bool) -> void:
+	Settings.auto_speed = $PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer2/auto.value
+
+func _on_ticks_drag_ended(_value_changed: bool) -> void:
+	Settings.tick_mod = $PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer/ticks.value
+
+func _on_tab_container_tab_changed(tab: int) -> void:
+	if tab == 2:
+		$PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer/ticks.value = Settings.tick_mod
+		$PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer/HBoxContainer2/auto.value = Settings.auto_speed
+		$PanelContainer/HBoxContainer/TabContainer/Settings/VBoxContainer4/autooptiond.button_pressed = Settings.autoafter

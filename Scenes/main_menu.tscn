@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://bof5o7ymp3sls"]
+
+[ext_resource type="Script" uid="uid://b1eojiqtibqug" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="PackedScene" uid="uid://csvaomcctbde" path="res://Scenes/settings_menu.tscn" id="2_48xlc"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=2006692246]
+script = ExtResource("1_28flt")
+
+[node name="BG" type="MarginContainer" parent="." unique_id=674357211]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="BG" unique_id=807772012]
+layout_mode = 2
+
+[node name="SideOptions" type="VBoxContainer" parent="." unique_id=869464225]
+anchors_preset = -1
+anchor_left = 0.067
+anchor_top = 0.15100001
+anchor_right = 0.23400001
+anchor_bottom = 0.883
+offset_left = -0.18400574
+offset_top = 0.1519928
+offset_right = -0.5680237
+offset_bottom = -0.184021
+theme_override_constants/separation = 100
+
+[node name="Start" type="Button" parent="SideOptions" unique_id=950727810]
+layout_mode = 2
+text = "Start"
+
+[node name="Load" type="Button" parent="SideOptions" unique_id=1349207571]
+layout_mode = 2
+text = "Load"
+
+[node name="Settings" type="Button" parent="SideOptions" unique_id=1163632348]
+layout_mode = 2
+text = "Settings"
+
+[node name="Exit" type="Button" parent="SideOptions" unique_id=1651919536]
+layout_mode = 2
+text = "Exit"
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=1700694518]
+autoplay = true
+
+[node name="Blocker" type="MarginContainer" parent="." unique_id=865201602]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Blocker" unique_id=724351873]
+layout_mode = 2
+
+[node name="ExitConf" type="MarginContainer" parent="." unique_id=1755549397]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.0
+offset_top = -122.0
+offset_right = 205.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="ExitConf" unique_id=2027831614]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExitConf" unique_id=242197412]
+layout_mode = 2
+theme_override_constants/separation = 77
+
+[node name="Label" type="Label" parent="ExitConf/VBoxContainer" unique_id=1216381095]
+layout_mode = 2
+text = "Are you sure you want to exit?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ExitConf/VBoxContainer" unique_id=958796154]
+layout_mode = 2
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="Yes" type="Button" parent="ExitConf/VBoxContainer/HBoxContainer" unique_id=1255082317]
+layout_mode = 2
+text = "Yes"
+
+[node name="No" type="Button" parent="ExitConf/VBoxContainer/HBoxContainer" unique_id=1214509656]
+layout_mode = 2
+text = "No"
+
+[node name="Menu" parent="." unique_id=2094561511 instance=ExtResource("2_48xlc")]
+
+[connection signal="pressed" from="SideOptions/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="SideOptions/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="SideOptions/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="SideOptions/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="ExitConf/VBoxContainer/HBoxContainer/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="ExitConf/VBoxContainer/HBoxContainer/No" to="." method="_on_no_pressed"]
